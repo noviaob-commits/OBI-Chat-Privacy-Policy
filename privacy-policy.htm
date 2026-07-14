@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy – OBI Chat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0d0f14;
+      --surface:   #13161e;
+      --border:    #1e2330;
+      --accent:    #4f8ef7;
+      --accent2:   #7c5cfc;
+      --text:      #e8eaf0;
+      --muted:     #7b82a0;
+      --pill-bg:   #1a1f2e;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0d0f14 0%, #111627 60%, #0d0f14 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(79,142,247,.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--pill-bg);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 32px;
+      letter-spacing: .04em;
+    }
+    .logo-badge span {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+      box-shadow: 0 0 8px var(--accent);
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      background: linear-gradient(120deg, #e8eaf0 30%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .updated-tag {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--muted);
+      background: var(--pill-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 12px;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 40px;
+      margin-bottom: 20px;
+      position: relative;
+      transition: border-color .2s;
+    }
+    .section:hover { border-color: #2a3050; }
+
+    .section-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 16px;
+      letter-spacing: -.01em;
+    }
+    .section p {
+      color: #a8adc4;
+      margin-bottom: 12px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+    ul li {
+      color: #a8adc4;
+      padding: 7px 0 7px 28px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+    }
+
+    strong { color: var(--text); font-weight: 500; }
+
+    /* ── HIGHLIGHT CARD ── */
+    .highlight {
+      background: linear-gradient(135deg, rgba(79,142,247,.08), rgba(124,92,252,.08));
+      border: 1px solid rgba(79,142,247,.2);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .highlight-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .highlight p { margin: 0; color: #9dadd4; font-size: 14px; }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(79,142,247,.06), rgba(124,92,252,.06));
+      border: 1px solid rgba(79,142,247,.18);
+      border-radius: 16px;
+      padding: 36px 40px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .contact-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .contact-card p { color: var(--muted); margin-bottom: 20px; }
+    .email-link {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: .02em;
+      transition: opacity .2s, transform .15s;
+    }
+    .email-link:hover { opacity: .88; transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .section { padding: 24px 20px; }
+      .contact-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="logo-badge"><span></span> OBI Chat</div>
+    <h1>Privacy Policy</h1>
+    <p>We're committed to protecting your personal data and being transparent about how we use it.</p>
+    <div class="updated-tag">Last updated: July 14, 2026</div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <div class="section">
+      <div class="section-num">01</div>
+      <h2>Information We Collect</h2>
+      <p>When you register or use OBI Chat, we collect only what's necessary to provide our service:</p>
+      <ul>
+        <li>Full Name</li>
+        <li>Email Address</li>
+        <li>Phone Number</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-num">02</div>
+      <h2>How We Use Your Information</h2>
+      <p>Your data is used exclusively to operate and improve OBI Chat:</p>
+      <ul>
+        <li>Create and manage your account</li>
+        <li>Allow you to create and join private chat rooms</li>
+        <li>Enable secure communication between users</li>
+        <li>Improve the overall user experience</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-num">03</div>
+      <h2>Data Visibility</h2>
+      <p>Your personal information is <strong>never publicly visible</strong>. Access is strictly limited to:</p>
+      <ul>
+        <li>The owner of the room you joined</li>
+        <li>The application administrator</li>
+      </ul>
+      <div class="highlight">
+        <div class="highlight-icon">🔒</div>
+        <p>We treat your privacy as a core feature, not an afterthought. Your name, email, and phone number are never displayed to other users outside your room.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-num">04</div>
+      <h2>Data Sharing</h2>
+      <p>We do <strong>not</strong> sell, trade, or share your personal information with any third parties, advertisers, or external organizations — ever.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">05</div>
+      <h2>Data Security</h2>
+      <p>We take reasonable and industry-standard measures to protect your personal information from unauthorized access, alteration, or disclosure. All data is stored securely and access is strictly controlled.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">06</div>
+      <h2>Data Retention</h2>
+      <p>We retain your personal data for as long as your account is active. You may request deletion of your account and all associated data at any time by contacting us.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">07</div>
+      <h2>Children's Privacy</h2>
+      <p>OBI Chat is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware of such data, it will be deleted promptly.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-num">08</div>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any significant changes will be reflected by updating the date at the top of this page. Continued use of OBI Chat after changes constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-card">
+      <h2>Questions or Concerns?</h2>
+      <p>If you have any questions about this Privacy Policy or how we handle your data, we're here to help.</p>
+      <a href="mailto:noviaob@gmail.com" class="email-link">noviaob@gmail.com</a>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 OBI Chat · All rights reserved
+  </footer>
+
+</body>
+</html>
